@@ -1,7 +1,127 @@
-<!DOCTYPE html>
-<html>
-<body>
-  <h1>Welcome to my Personal Page</h1>
-  <p>Hosted on GitHub Pages!</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal website for Julie Jueun, including projects, CV, and contact links."
+    >
+    <title>Julie Jueun</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top">Julie Jueun</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#cv">CV</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal website</p>
+          <h1 id="intro-title">Hi, I&apos;m Julie Jueun.</h1>
+          <p class="intro">
+            I&apos;m a student and developer interested in thoughtful software,
+            clear design, and projects that make complex ideas easier to use.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="assets/cv.pdf">Download CV</a>
+          </div>
+        </div>
+
+        <figure class="profile">
+          <img
+            src="assets/profile.png"
+            alt="Portrait of Julie Jueun"
+            width="480"
+            height="480"
+          >
+          <figcaption>Developer, learner, and problem solver.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Building with care and curiosity.</h2>
+        </div>
+        <p>
+          I enjoy working across the full project lifecycle: understanding a
+          problem, designing a clean experience, and implementing practical,
+          maintainable solutions. This site is a small home for my work,
+          coursework, and experiments.
+        </p>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Selected work</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+              A responsive personal website built with semantic HTML and CSS,
+              designed to be hosted directly on GitHub Pages.
+            </p>
+          </article>
+          <article class="project-card">
+            <h3>Coursework Projects</h3>
+            <p>
+              Class assignments and prototypes that explore programming,
+              interface design, data, and practical problem solving.
+            </p>
+          </article>
+          <article class="project-card">
+            <h3>Research Notes</h3>
+            <p>
+              Short writeups and experiments connecting technical ideas with
+              clear communication and reproducible work.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="cv" aria-labelledby="cv-title">
+        <div>
+          <p class="eyebrow">CV</p>
+          <h2 id="cv-title">Resume and experience</h2>
+        </div>
+        <div>
+          <p>
+            My CV includes education, projects, technical skills, and selected
+            experience. The download link points to the PDF in this repository.
+          </p>
+          <a class="button primary" href="assets/cv.pdf">Open CV PDF</a>
+        </div>
+      </section>
+
+      <section class="section split" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let&apos;s connect.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/juliejueun" rel="noreferrer">GitHub</a>
+          <a href="assets/cv.pdf">Resume</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Julie Jueun. Built for GitHub Pages.</p>
+    </footer>
+  </body>
 </html>
