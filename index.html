@@ -8,9 +8,17 @@
       content="Personal website for Jueun Song, including projects, CV, and contact links."
     >
     <title>Jueun Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="styles.css">
+    <script src="lanterns.js" defer></script>
   </head>
   <body>
+    <canvas class="lantern-canvas" id="lantern-canvas" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" id="top">
@@ -20,7 +28,9 @@
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#cv">CV</a>
+          <a href="#courses">Courses</a>
           <a href="#contact">Contact</a>
+          <a href="#ai-usage">AI Usage</a>
         </div>
       </nav>
     </header>
@@ -28,11 +38,12 @@
     <main id="main">
       <section class="hero" aria-labelledby="intro-title">
         <div class="hero-copy">
-          <p class="eyebrow">Personal website</p>
-          <h1 id="intro-title">Hi, I&apos;m Jueun Song.</h1>
+          <p class="eyebrow">Personal portfolio</p>
+          <h1 id="intro-title">Jueun Song</h1>
           <p class="intro">
-            I&apos;m a student and developer interested in thoughtful software,
-            clear design, and projects that make complex ideas easier to use.
+            Computer Science and Engineering undergraduate at Seoul National
+            University, exploring AI, biometric data analysis, information
+            theory, and human-centered computing.
           </p>
           <div class="hero-actions" aria-label="Primary links">
             <a class="button primary" href="#projects">View projects</a>
@@ -47,65 +58,116 @@
             width="480"
             height="480"
           >
-          <figcaption>Developer, learner, and problem solver.</figcaption>
+          <figcaption>
+            Computer science student with interests across software, biology,
+            and brain-mind-behavior research.
+          </figcaption>
         </figure>
       </section>
 
       <section class="section" id="about" aria-labelledby="about-title">
         <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Building with care and curiosity.</h2>
+          <p class="eyebrow">About Me</p>
+          <h2 id="about-title">Building useful systems with a curious mind.</h2>
         </div>
-        <p>
-          I enjoy working across the full project lifecycle: understanding a
-          problem, designing a clean experience, and implementing practical,
-          maintainable solutions. This site is a small home for my work,
-          coursework, and experiments.
-        </p>
+        <div class="glass-panel">
+          <p>
+            I enjoy connecting technical problem solving with human-centered
+            questions. My academic path combines computer science, biological
+            sciences, and the Brain-Mind-Behavior interdisciplinary program,
+            which has shaped my interest in AI systems for biometric and neural
+            data.
+          </p>
+        </div>
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
+          <p class="eyebrow">Projects & Activities</p>
           <h2 id="projects-title">Selected work</h2>
         </div>
         <div class="project-grid">
           <article class="project-card">
-            <h3>Portfolio Website</h3>
+            <h3>Adaptive Fingerprint Recognition</h3>
             <p>
-              A responsive personal website built with semantic HTML and CSS,
-              designed to be hosted directly on GitHub Pages.
+              Designed an age-aware biometric recognition pipeline for older
+              adults with degraded fingerprint patterns.
+            </p>
+            <p>
+              Built CNN-based age grouping and adaptive reconstruction steps
+              using public fingerprint datasets and image augmentation.
             </p>
           </article>
           <article class="project-card">
-            <h3>Coursework Projects</h3>
+            <h3>Entropy-Based Wordle Solver</h3>
             <p>
-              Class assignments and prototypes that explore programming,
-              interface design, data, and practical problem solving.
+              Implemented a Shannon entropy search strategy with dynamic
+              one-step and two-step pruning.
+            </p>
+            <p>
+              Optimized LLM feedback parsing with Mistral-7B and regex
+              extraction, reducing inference time while preserving structured
+              output.
             </p>
           </article>
           <article class="project-card">
-            <h3>Research Notes</h3>
+            <h3>GIV Volunteer Activities</h3>
             <p>
-              Short writeups and experiments connecting technical ideas with
-              clear communication and reproducible work.
+              Participate in SNU GIV activities including baking service,
+              workshop-based volunteering, and physical activity support for
+              children with developmental disabilities.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="cv" aria-labelledby="cv-title">
-        <div>
-          <p class="eyebrow">CV</p>
-          <h2 id="cv-title">Resume and experience</h2>
+      <section class="section" id="cv" aria-labelledby="cv-title">
+        <div class="section-heading">
+          <p class="eyebrow">CV / Resume</p>
+          <h2 id="cv-title">Education, skills, and experience</h2>
         </div>
-        <div>
-          <p>
-            My CV includes education, projects, technical skills, and selected
-            experience. The download link points to the PDF in this repository.
-          </p>
+        <div class="cv-grid">
+          <article class="glass-panel">
+            <h3>Education</h3>
+            <p>
+              <strong>Seoul National University</strong><br>
+              B.S. Candidate, Computer Science and Engineering
+            </p>
+            <p>
+              Minor in Biological Sciences; Interdisciplinary Program in
+              Brain-Mind-Behavior.
+            </p>
+          </article>
+          <article class="glass-panel">
+            <h3>Technical Skills</h3>
+            <p>C++, Java, Python</p>
+            <p>
+              Coursework includes Discrete Mathematics, Programming Practice,
+              Computer Programming, Data Structures, and Logic Design.
+            </p>
+          </article>
+          <article class="glass-panel">
+            <h3>Experience & Awards</h3>
+            <p>Volunteer Member, GIV at Seoul National University</p>
+            <p>Presidential Science Scholarship recipient</p>
+          </article>
+        </div>
+        <div class="section-actions">
           <a class="button primary" href="assets/cv.pdf">Open CV PDF</a>
         </div>
+      </section>
+
+      <section class="section" id="courses" aria-labelledby="courses-title">
+        <div class="section-heading">
+          <p class="eyebrow">Future Courses</p>
+          <h2 id="courses-title">Courses I plan to explore</h2>
+        </div>
+        <ul class="sun-list">
+          <li>Algorithms and problem solving</li>
+          <li>Artificial intelligence and machine learning</li>
+          <li>Computer systems and software engineering</li>
+          <li>Neuroscience, biological data, and signal analysis</li>
+        </ul>
       </section>
 
       <section class="section split" id="contact" aria-labelledby="contact-title">
@@ -114,8 +176,25 @@
           <h2 id="contact-title">Let&apos;s connect.</h2>
         </div>
         <div class="contact-links">
+          <a href="mailto:jueunsong@snu.ac.kr">Email</a>
           <a href="https://github.com/juliejueun" rel="noreferrer">GitHub</a>
           <a href="assets/cv.pdf">Resume</a>
+        </div>
+      </section>
+
+      <section class="section" id="ai-usage" aria-labelledby="ai-title">
+        <div class="section-heading">
+          <p class="eyebrow">AI Usage</p>
+          <h2 id="ai-title">How this site was made</h2>
+        </div>
+        <div class="glass-panel">
+          <p>
+            <strong>Tool used:</strong> OpenAI Codex, Gemini.
+          </p>
+          <p>
+            <strong>Example prompt:</strong> “Read DESIGN.md in this repo and
+            make the webpage follow this theme.”
+          </p>
         </div>
       </section>
     </main>
