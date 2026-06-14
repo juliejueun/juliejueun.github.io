@@ -11,8 +11,8 @@
 - **`Starlight White` (#FDFDFF):** Main text color for high readability against the dark backgrounds.
 
 ## 3. Typography
-- **Headings:** `Playfair Display` (Elegant and classic serif for a fairy-tale aesthetic).
-- **Body Text:** `Lora` (Highly readable, slightly traditional but warm for the main content).
+- **Headings:** `Nunito` with a sans-serif fallback for a rounded, friendly, and still professional academic portfolio feel.
+- **Body Text:** `Nunito` with the same fallback stack for soft readability and visual consistency across the page.
 
 ## 4. Required Content & Structure
 To ensure all assignment requirements are met while maintaining the magical theme, the webpage will be structured with the following sections:
@@ -37,6 +37,7 @@ To ensure all assignment requirements are met while maintaining the magical them
 ### Future Courses
 - [cite_start]A dedicated section listing the courses you plan to take in the future[cite: 599].
 - **Thematic touch:** Use small Corona Sun Crest icons as bullet points for the list.
+- **Planned courses:** Cell Biology, Memory and Brain, Cognitive Neuroscience, Artificial Intelligence and Natural Intelligence.
 
 ### Contact
 - [cite_start]A section containing your contact information, such as your email, GitHub, or other links[cite: 595].
